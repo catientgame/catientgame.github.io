@@ -1,0 +1,54 @@
+/* Pop graphique — shared across the public pages. */
+:root{--paper:#fff17b;--ink:#091c2c;--accent:#ff704b;--accent-ink:#94351f;--muted:#374650;--line:#b8aa50;--surface:#fff8cb;--white:#fffdf1}
+body{background:var(--paper);color:var(--ink)}
+.wrap{width:min(100% - 3rem,78rem)}
+.site-header{border-bottom:2px solid var(--ink);padding-block:1rem}
+.brand span,.footer-brand{font-family:Impact,'Arial Narrow','Helvetica Neue',sans-serif;font-size:2.1rem;font-weight:900;letter-spacing:-.04em}
+.brand em{font:inherit;color:inherit;position:relative}
+.brand em:after{content:'';height:5px;background:var(--accent);position:absolute;bottom:-5px;left:-2.5rem;right:0;transform:rotate(-6deg);border-radius:3px}
+.brand img{width:38px;height:38px}
+.site-header nav a{font-weight:750;font-size:1rem}
+.site-header nav a[aria-current]{text-decoration-thickness:4px;text-decoration-color:var(--accent)}
+h1,h2{font-family:Impact,'Arial Narrow','Helvetica Neue',sans-serif;font-weight:900;letter-spacing:-.025em;line-height:.99}
+h1{font-size:clamp(3.8rem,7.6vw,7rem)}
+h1 em,h2 em{font:inherit;color:inherit}
+h2{font-size:clamp(2.5rem,4.5vw,4rem)}
+.hero{grid-template-columns:1.05fr 1fr;gap:1rem;padding-block:2.5rem 2rem;min-height:680px}
+.hero-copy{position:relative;z-index:1}
+.hero-copy .lead{font-size:1.25rem;max-width:32rem;margin-block:1.5rem 1.8rem}
+.eyebrow{font-weight:800;letter-spacing:.11em;margin-bottom:1.2rem}
+.button{background:var(--accent);color:var(--ink);border:2px solid var(--ink);box-shadow:4px 4px 0 var(--ink);border-radius:.85rem;font-size:1.05rem;font-weight:800;min-height:58px;padding:1rem 1.4rem;gap:1.5rem}
+.button:hover{background:#ff8c6e;color:var(--ink);transform:translateY(-2px)}
+.button:active{box-shadow:1px 1px 0 var(--ink);transform:translate(2px,2px)}
+.button:focus-visible{outline-color:var(--ink);outline-width:3px}
+.prose .button{color:var(--ink)}
+.pop-visual{position:relative;padding:0;align-self:center;width:100%;max-width:34rem;justify-self:center}
+.pop-hero{width:100%;height:650px;object-fit:contain}
+.pop-visual figcaption{margin-top:.25rem;font-size:.72rem}
+.pop-sticker{position:absolute;right:0;top:46%;display:grid;place-content:center;width:116px;height:116px;background:var(--accent);color:var(--ink);font-family:Impact,'Arial Narrow',sans-serif;font-size:1.8rem;line-height:1;transform:rotate(12deg);clip-path:polygon(50% 0%,61% 12%,75% 7%,79% 23%,95% 25%,91% 42%,100% 50%,88% 62%,93% 76%,77% 81%,75% 95%,59% 90%,50% 100%,39% 88%,25% 94%,21% 78%,6% 75%,11% 60%,0 50%,12% 40%,6% 25%,23% 21%,25% 6%,40% 12%)}
+.how-to{border-block:2px solid var(--ink);padding-block:2.5rem}
+.how-to h2{font-size:2.5rem}
+.how-to li>span{color:var(--ink);font-size:.9rem;font-weight:800}
+.how-to h3{font-size:1.35rem}
+.upcoming{gap:4rem;padding-block:5rem}
+.game-facts dt{font-family:Impact,'Arial Narrow',sans-serif;font-weight:900}
+.release-note{border-left:4px solid var(--accent-ink)}
+.gameplay{border:2px solid var(--ink);box-shadow:9px 10px 0 #d6c657}
+.atelier{background:var(--white);border:2px solid var(--ink);border-radius:1rem;box-shadow:6px 6px 0 #d6c657}
+.closing h2{font-size:3rem}
+.site-footer{border-top:2px solid var(--ink)}
+.page-heading{max-width:none;padding-block:4rem 3.5rem}
+.illustrated-heading{display:grid;grid-template-columns:1.5fr 1fr;gap:2rem;align-items:center}
+.support-art{width:100%;max-width:340px;justify-self:end}
+.contents{border-top:0;padding-top:0}
+.contents a{background:var(--white);border:1px solid var(--ink);border-radius:.5rem;margin-bottom:.65rem;padding:.8rem 1rem;text-decoration:none;font-weight:700;min-height:52px;box-shadow:2px 2px 0 #d6c657}
+.contents a:hover{background:var(--surface);transform:translateX(2px)}
+.document-layout{grid-template-columns:17rem minmax(0,1fr);gap:3rem}
+.prose{background:var(--white);padding:2rem;border:1px solid var(--ink);border-radius:.75rem;max-width:none}
+.prose p,.prose li{color:#273747}
+.prose h2{font-family:inherit;font-size:1.6rem;line-height:1.2;letter-spacing:-.03em;font-weight:800}
+.contact-band{border:2px solid var(--ink);border-radius:.75rem;padding:1.7rem;background:var(--white);box-shadow:5px 5px 0 #d6c657}
+.email-link{color:var(--ink);text-decoration-color:var(--accent-ink);font-weight:800}
+.editorial{gap:3rem}
+@media(max-width:900px){.hero{min-height:0}.pop-hero{height:520px}.pop-sticker{width:90px;height:90px;font-size:1.4rem}.document-layout{grid-template-columns:13rem minmax(0,1fr);gap:1.5rem}.prose{padding:1.5rem}.illustrated-heading{grid-template-columns:1.4fr 1fr}}
+@media(max-width:640px){.wrap{width:calc(100% - 2rem)}.site-header{gap:.8rem}.brand span{font-size:2rem}.site-header nav a{font-size:.9rem}.hero{grid-template-columns:1fr;gap:.5rem;padding-top:2.5rem}.hero h1{font-size:clamp(3.5rem,13vw,5.1rem)}.hero-copy .lead{font-size:1.06rem}.hero .button{width:100%;font-size:.96rem}.pop-visual{max-width:27rem;width:100%}.pop-hero{height:450px}.pop-sticker{right:1rem;top:48%}.how-to h2{font-size:2.4rem}.upcoming{gap:2.5rem;padding-block:3.5rem}.atelier{padding:1.8rem 1.2rem}.page-heading{padding-block:2.8rem}.page-heading h1{font-size:clamp(3.2rem,12vw,4.7rem)}.illustrated-heading{grid-template-columns:1fr;gap:1rem}.support-art{max-width:210px;justify-self:center}.document-layout{grid-template-columns:1fr;gap:1.5rem}.contents{position:static}.prose{padding:1.3rem}.editorial{grid-template-columns:1fr}.closing h2{font-size:2.5rem}.contact-band{padding:1.25rem}.email-link{font-size:1rem}.game-facts dt{font-size:2.6rem}}
